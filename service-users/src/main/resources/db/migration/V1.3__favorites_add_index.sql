@@ -1,0 +1,1 @@
+create index favorites_product_id_idx on favorites (product_id);

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config
+  config:
+    import: classpath:env.yml
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GITHUB.REPOSITORY_URI}
+          clone-on-start: true
+          basedir: ./tmp/git
+          username: ${GITHUB.USERNAME}
+          password: ${GITHUB.API_TOKEN}
+          default-label: main
+
+server:
+  port: 8888

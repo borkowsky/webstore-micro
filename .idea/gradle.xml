@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/config" />
+            <option value="$PROJECT_DIR$/discovery" />
+            <option value="$PROJECT_DIR$/dto" />
+            <option value="$PROJECT_DIR$/entity" />
+            <option value="$PROJECT_DIR$/exceptions" />
+            <option value="$PROJECT_DIR$/gateway" />
+            <option value="$PROJECT_DIR$/service-events" />
+            <option value="$PROJECT_DIR$/service-orders" />
+            <option value="$PROJECT_DIR$/service-products" />
+            <option value="$PROJECT_DIR$/service-reviews" />
+            <option value="$PROJECT_DIR$/service-uploads" />
+            <option value="$PROJECT_DIR$/service-users" />
+            <option value="$PROJECT_DIR$/utility" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

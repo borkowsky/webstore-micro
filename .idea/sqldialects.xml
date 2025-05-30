@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/service-events/src/main/resources/db/migration/V1.0__table_schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-orders/src/main/java/net/rewerk/webstore/orders/repository/PaymentRepository.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-orders/src/main/resources/db/migration/V1.0__table_schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-products/src/main/resources/db/migration/V1.1__stats.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-products/src/main/resources/db/migration/V1__table_schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-reviews/src/main/java/net/rewerk/webstore/reviews/repository/ReviewRepository.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-reviews/src/main/resources/db/migration/V1.0__table_schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-users/src/main/resources/db/migration/V1.1__basket_table.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-users/src/main/resources/db/migration/V1.2__favorites_table.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-users/src/main/resources/db/migration/V1.3__favorites_add_index.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/service-users/src/main/resources/db/migration/V1__table_schema.sql" dialect="PostgreSQL" />
+  </component>
+</project>
