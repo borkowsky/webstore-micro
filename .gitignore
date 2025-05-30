@@ -45,4 +45,9 @@ env.yml
 .env
 gcs-credentials.json
 rabbitmq/rabbitmq/**
+config/tmp/**
+config/tmp
+config/tmp/git/**
 tmp/**
+tmp
+tmp/git/**
