@@ -1,0 +1,10 @@
+server:
+  port: 50004
+
+spring:
+  application:
+    name: service-uploads
+  config:
+    import: configserver:http://localhost:8888
+  profiles:
+    active: kafka,resourceserver,eureka-client

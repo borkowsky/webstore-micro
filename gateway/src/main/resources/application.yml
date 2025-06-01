@@ -4,5 +4,7 @@ server:
 spring:
   application:
     name: gateway
+  profiles:
+    active: cloud
   config:
-    import: configserver:http://localhost:8888
+    import: configserver:http://config-service:8888

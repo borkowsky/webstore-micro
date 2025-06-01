@@ -1,0 +1,10 @@
+server:
+  port: 50002
+
+spring:
+  application:
+    name: service-orders
+  config:
+    import: configserver:http://localhost:8888
+  profiles:
+    active: eureka-client,kafka,caffeine,jpa,feign,resourceserver

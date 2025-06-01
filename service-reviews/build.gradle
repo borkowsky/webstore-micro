@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'net.rewerk.webstore'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0-RELEASE'
 
 java {
     toolchain {
@@ -32,6 +32,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
@@ -39,6 +40,7 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'
     implementation 'org.springframework.kafka:spring-kafka'
     implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
     implementation 'io.projectreactor:reactor-core:3.8.0-M3'
     implementation 'com.github.ben-manes.caffeine:caffeine:3.2.0'
     implementation 'io.github.openfeign:feign-okhttp:13.6'

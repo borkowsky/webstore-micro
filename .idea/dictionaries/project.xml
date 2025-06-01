@@ -1,10 +1,28 @@
 <component name="ProjectDictionaryState">
   <dictionary name="project">
     <words>
+      <w>aclfile</w>
+      <w>alertmanager</w>
+      <w>appendfsync</w>
+      <w>appendonly</w>
+      <w>blackhole</w>
       <w>circuitbreaker</w>
       <w>confluentinc</w>
+      <w>datasources</w>
+      <w>djarmode</w>
+      <w>everysec</w>
       <w>globalcors</w>
+      <w>grafanadata</w>
+      <w>nopass</w>
+      <w>promscrape</w>
+      <w>redisdata</w>
+      <w>requirepass</w>
       <w>resourceserver</w>
+      <w>victoriametrics</w>
+      <w>vmagent</w>
+      <w>vmagentdata</w>
+      <w>vmalert</w>
+      <w>vmdata</w>
     </words>
   </dictionary>
 </component>

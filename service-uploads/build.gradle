@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'net.rewerk.webstore'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0-RELEASE'
 
 java {
     toolchain {
@@ -31,10 +31,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     implementation 'org.springframework.kafka:spring-kafka'
     implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
     implementation 'com.google.cloud:google-cloud-storage:2.52.3'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation project(':dto')

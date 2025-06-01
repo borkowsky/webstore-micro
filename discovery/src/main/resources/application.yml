@@ -2,7 +2,9 @@ server:
   port: 8081
 
 spring:
-  config:
-    import: configserver:http://localhost:8888
   application:
     name: discovery
+  profiles:
+    active: cloud
+  config:
+    import: configserver:http://config-service:8888

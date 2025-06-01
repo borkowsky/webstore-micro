@@ -9,7 +9,6 @@ import org.springframework.security.oauth2.core.oidc.StandardClaimNames;
 import org.springframework.security.oauth2.jwt.Jwt;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Common security utilities
@@ -18,6 +17,8 @@ import java.util.stream.Collectors;
  */
 
 public abstract class SecurityUtils {
+    private static final String ROLE_PREFIX = "ROLE_";
+    private static final String SCOPE_PREFIX = "SCOPE_";
 
     /**
      * Form user information DTO from OAuth2 jwt token and Spring Security Authentication object
@@ -82,17 +83,27 @@ public abstract class SecurityUtils {
         }
         List<GrantedAuthority> authorities = new ArrayList<>();
         Map<String, Object> claims = jwt.getClaims();
-        if (claims.containsKey("realm_access")
-                && claims.get("realm_access") instanceof Map<?, ?>) {
+        final String SCOPE_CLAIM_NAME = "scope";
+        if (claims.containsKey(SCOPE_CLAIM_NAME)) {
+            String SCOPE_CLAIM_SEPARATOR = " ";
+            String[] scopes = ((String) claims.get(SCOPE_CLAIM_NAME)).split(SCOPE_CLAIM_SEPARATOR);
+            Arrays.stream(scopes)
+                    .map(scope -> new SimpleGrantedAuthority(SCOPE_PREFIX + scope))
+                    .forEach(authorities::add);
+        }
+        final String REALM_ACCESS_CLAIM_NAME = "realm_access";
+        if (claims.containsKey(REALM_ACCESS_CLAIM_NAME)
+                && claims.get(REALM_ACCESS_CLAIM_NAME) instanceof Map<?, ?>) {
             @SuppressWarnings("unchecked")
-            Map<String, Object> realmAccess = (Map<String, Object>) claims.get("realm_access");
-            if (realmAccess.containsKey("roles") && realmAccess.get("roles") instanceof List) {
+            Map<String, Object> realmAccess = (Map<String, Object>) claims.get(REALM_ACCESS_CLAIM_NAME);
+            final String ROLES_CLAIM_NAME = "roles";
+            if (realmAccess.containsKey(ROLES_CLAIM_NAME) && realmAccess.get(ROLES_CLAIM_NAME) instanceof List) {
                 @SuppressWarnings("unchecked")
-                List<String> roles = (List<String>) realmAccess.get("roles");
-                authorities = roles.stream()
-                        .filter(s -> s.startsWith("ROLE_"))
+                List<String> roles = (List<String>) realmAccess.get(ROLES_CLAIM_NAME);
+                roles.stream()
+                        .filter(s -> s.startsWith(ROLE_PREFIX))
                         .map(SimpleGrantedAuthority::new)
-                        .collect(Collectors.toList());
+                        .forEach(authorities::add);
             }
         }
         return authorities;

@@ -5,6 +5,6 @@ spring:
   application:
     name: service-events
   config:
-    import: configserver:http://localhost:8888
+    import: configserver:http://config-service:8888
   profiles:
-    active: eureka-client,kafka,jpa,feign,caffeine,resourceserver
+    active: eureka-client-cloud,kafka-cloud,jpa,feign-cloud,caffeine,resourceserver-cloud,cloud,metrics-cloud

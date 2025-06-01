@@ -1,0 +1,10 @@
+server:
+  port: 50003
+
+spring:
+  application:
+    name: service-reviews
+  config:
+    import: configserver:http://localhost:8888
+  profiles:
+    active: caffeine,kafka,feign,resourceserver,jpa,eureka-client

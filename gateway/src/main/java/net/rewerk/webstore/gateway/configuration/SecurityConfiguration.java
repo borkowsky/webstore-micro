@@ -29,6 +29,8 @@ import java.util.List;
 public class SecurityConfiguration {
     @Value("${frontend.uri}")
     private String FRONTEND_URI;
+    @Value("${cookies.domain}")
+    private String COOKIES_DOMAIN;
 
     @Bean
     SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity httpSecurity,
@@ -142,6 +144,7 @@ public class SecurityConfiguration {
         final String AUTH_COOKIE_NAME = "gateway-auth";
         resolver.setCookieName(AUTH_COOKIE_NAME);
         resolver.addCookieInitializer((builder) -> builder.path("/"));
+        resolver.addCookieInitializer((builder) -> builder.domain(COOKIES_DOMAIN));
         resolver.addCookieInitializer((builder) -> builder.sameSite("Lax"));
         resolver.addCookieInitializer((builder) -> builder
                 .maxAge(60 * 60 * 24));
