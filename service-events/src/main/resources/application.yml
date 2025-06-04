@@ -4,7 +4,3 @@ server:
 spring:
   application:
     name: service-events
-  config:
-    import: configserver:http://config-service:8888
-  profiles:
-    active: eureka-client-cloud,kafka-cloud,jpa,feign-cloud,caffeine,resourceserver-cloud,cloud,metrics-cloud

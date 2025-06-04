@@ -13,7 +13,7 @@ import java.util.UUID;
 
 @Slf4j
 public class EventWritingService {
-    protected void writeEvent(Suppliers suppliers, String text) {
+    public void writeEvent(Suppliers suppliers, String text) {
         log.info("EventWritingService.writeEvent: send write event message to SCS queue with text = {}", text);
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null) {

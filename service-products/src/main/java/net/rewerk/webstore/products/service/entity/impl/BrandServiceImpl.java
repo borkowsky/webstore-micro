@@ -99,8 +99,7 @@ public class BrandServiceImpl extends EventWritingService implements BrandServic
     @Override
     public BrandResponseDto create(BrandCreateDto dto) {
         log.info("BrandServiceImpl.create: Create brand, DTO = {}", dto);
-        Brand brand = brandDtoMapper.createDtoToBrand(dto);
-        return this.create(brand);
+        return this.create(brandDtoMapper.createDtoToBrand(dto));
     }
 
     /**

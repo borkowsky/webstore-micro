@@ -64,7 +64,7 @@ public class CategoriesController {
      * GET endpoint for retrieve list of Category entities by Product identifiers
      *
      * @param productIds List of Product identifiers
-     * @return Response with status 200 OK and payload with collection of Category entities
+     * @return Response with status 200 OK and payload with collection of Category entities response DTO
      */
 
     @GetMapping("by_products")
@@ -80,7 +80,7 @@ public class CategoriesController {
      *
      * @param request    DTO with create data
      * @param uriBuilder UriComponentsBuilder - autowired for create redirect
-     * @return Response with status 201 Created and single payload with created Category entity
+     * @return Response with status 201 Created and single payload with created Category entity response DTO
      */
 
     @PostMapping

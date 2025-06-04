@@ -35,7 +35,7 @@ public class BrandsController {
      * Method for find brands by search criteria
      *
      * @param request DTO with search parameters
-     * @return Response with status 200 OK and paginated payload with page of Brand entities
+     * @return Response with status 200 OK and paginated payload with page of Brand entity response DTO
      */
 
     @GetMapping
@@ -56,7 +56,7 @@ public class BrandsController {
      *
      * @param request    DTO with create data
      * @param uriBuilder UriComponentsBuilder - autowired for create redirect location
-     * @return Response with status 201 Created and single payload of created Brand entity
+     * @return Response with status 201 Created and single payload of created Brand entity response DTO
      */
 
     @PostMapping

@@ -4,7 +4,3 @@ server:
 spring:
   application:
     name: service-products
-  config:
-    import: configserver:http://config-service:8888
-  profiles:
-    active: caffeine,kafka-cloud,feign-cloud,resourceserver-cloud,jpa,eureka-client-cloud,cloud,metrics-cloud

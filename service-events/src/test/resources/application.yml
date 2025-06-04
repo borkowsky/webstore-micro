@@ -1,0 +1,10 @@
+server:
+  port: 50005
+
+spring:
+  application:
+    name: service-events
+  config:
+    import: configserver:http://localhost:8888
+  profiles:
+    active: eureka-client,kafka,jpa,feign,caffeine,resourceserver
